@@ -1,0 +1,36 @@
+.hero__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;  
+
+    margin-top: 128px;
+} 
+
+
+.hero__wrapper h1{
+    color: var(--secondary);
+    font-size: 7.7rem;
+    font-weight: 400;
+
+}
+
+.hero__copy{
+    margin-left: 25px;
+    position: relative;
+    top: -28px;
+}
+
+.hero__cta{
+    margin-top: 32px;
+}
+
+.hero_title{
+    
+}
+
+
+@media screen  and (max-width:1200px){
+    .hero__wrapper{
+        flex-wrap: wrap;
+    }    
+}

@@ -1,0 +1,24 @@
+/* vars */
+@import url('./_vars.css');
+
+/* reset  */
+@import url('./_reset.css');
+
+/* grid */
+@import url('./_grid.css');
+
+/* fonts  */
+
+@import url('./_fonts.css');
+
+/* components  */
+@import url('./components/_image_grid.css');
+@import url('./components/_header.css');
+@import url('./components/_hero.css');
+
+/* pages */
+.logo{
+    font-family: 'Pacifico', cursive;
+    color: var(--primary);
+    text-decoration: none;
+}

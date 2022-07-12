@@ -1,0 +1,93 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: var(--default-font);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: var(--sexternary);
+}
+
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5;
+    font-weight: 500;
+    max-width: 100%;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: unset;
+    outline: none;
+    cursor: pointer;
+    max-width:200px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    border-width: 4px;
+    border-style: solid;
+}
+
+.btn__primary {
+    background-color: var(--primary);
+    color: var(--quarternary);
+    border-color:transparent;
+}
+
+.c__quarternary{
+    color: var(--quarternary);
+}
+
+.btn__primary__outline {
+    background-color: unset;
+    color: var(--primary);
+    border-color:currentColor;
+}
+
+.button.small {
+    font-size: 1.8rem;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+    list-style-type: none;
+}
+
+@media  screen and (max-width:596px) {
+    html{
+        font-size: 2.5vw;
+    }
+}

@@ -1,0 +1,39 @@
+.header__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    margin-top: 20px;
+} 
+
+.header__wrapper nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.header__wrapper nav .menu{
+    margin-right: 32px;
+}
+
+.header__wrapper nav .menu li{
+    display: inline-block;  
+    margin-right: 32px;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 8px;
+}
+
+.header__wrapper nav .menu li a{
+    color: var(--secondary);
+}
+
+.header__wrapper nav .menu li:hover a{
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.header__wrapper nav .btn + .btn{
+    margin-left: 16px;
+}
+
+
+
