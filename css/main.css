@@ -13,12 +13,83 @@
 
 /* components  */
 @import url('./components/_image_grid.css');
+@import url('./components/_tittle_section.css');
+@import url('./components/_section.css');
 @import url('./components/_header.css');
 @import url('./components/_hero.css');
 
 /* pages */
-.logo{
+@import url('./pages/_home.css');
+
+.logo {
     font-family: 'Pacifico', cursive;
     color: var(--primary);
     text-decoration: none;
+}
+
+.slider.swiper {
+    height: 358px;
+}
+
+.slider {
+    background-color: var(--tertiary);
+    border: 16px solid var(--tertiary);
+    margin-top: 80px;
+}
+
+.slider img {
+    height: 100%;
+    /* min-width: fit-content; */
+    object-fit: cover;
+}
+
+.slider.swiper .swiper-wrapper .swiper-slide {
+    flex-shrink: 100 !important;
+    min-width: fit-content;
+}
+
+@media screen and (max-width:769px) {
+
+    .slider {
+        background-color: unset;
+        border: 0px;
+        margin-left: -1.6rem;
+        margin-right: -1.6rem;
+    }
+
+    .slider img {
+        object-fit: contain;
+        min-width: 100vw;
+    }
+
+    .slider.swiper {
+        height: 279px;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    height: 100%;
+    top: 22px;
+    background-color: rgba(0, 0, 0, 0.29);
+    width: 50px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(102, 204, 85, 0.80)
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+    color: var(--tertiary);
+}
+
+.swiper-button-prev {
+    left: 0px;
+}
+
+.swiper-button-next {
+    right: 0px;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <title>MePhoto</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -18,18 +21,18 @@
                     <h1>MePhoto</h1>
                 </a>
                 <nav>
-                    <ul class="menu">        
+                    <ul class="menu">
                         <li><a href="">Home</a></li>
                         <li><a href="">Plans</a></li>
-                        <li><a href="">Books</a></li> 
-                     </ul>
-                     <a class="btn btn__primary btn__primary__outline" href="#"> <span>LOGIN</span> </a>
-                     <a class="btn btn__primary" href="#"> <span>JOIN US</span> </a>
+                        <li><a href="">Books</a></li>
+                    </ul>
+                    <a class="btn btn__primary btn__primary__outline" href="#"> <span>LOGIN</span> </a>
+                    <a class="btn btn__primary" href="#"> <span>JOIN US</span> </a>
                 </nav>
             </div>
         </div>
     </header>
-    <main >
+    <main>
         <section class="hero">
             <div class="container">
                 <div class="hero__wrapper">
@@ -43,7 +46,75 @@
                 </div>
             </div>
         </section>
+        <section class="section features_plans">
+            <div class="container">
+                <div class="features_plans__wrapper">
+                    <div class="title-section">
+                        <h2>New today photos</h2>
+                    </div>
+                    <div class="slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/08.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/09.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/04.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/06.jpg">
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+            </div>
+        </div>
+    </footer>
     <script type="module" src="./js/main.js"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+
+            // preloadImages: true,
+            // Enable lazy loading
+            // lazy: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            direction: 'horizontal',
+            loop: false,
+            slidesPerView: 1,
+            speed: 400,
+            spaceBetween: 0,
+            breakpoints: {
+                // when window width is >= 320px
+                769: {
+                    freeMode: true,
+                    slidesPerView: 2,
+                    spaceBetween: 16,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                },
+            }
+        });
+
+        console.log(swiper)
+    </script>
 </body>
+
 </html>

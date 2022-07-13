@@ -1,0 +1,10 @@
+.section {
+  text-align: center;
+  padding: 124px 0px;
+}
+
+@media screen and (max-width:1200px) {
+  .section {
+    padding: 64px 0px;
+  }
+}

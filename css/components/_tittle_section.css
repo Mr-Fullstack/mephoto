@@ -1,0 +1,28 @@
+.title-section {
+  text-transform: uppercase;
+  color: var(--secondary);
+  width: fit-content;
+  display: inline-block;
+  line-height: 0;
+}
+
+.title-section h2 {
+  font-weight: 400;
+}
+
+.title-section::after,
+.title-section::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 7px;
+  background-color: var(--primary);
+}
+
+.title-section::after {
+  margin-top: 12px;
+}
+
+.title-section::before {
+  margin-bottom: 12px;
+}

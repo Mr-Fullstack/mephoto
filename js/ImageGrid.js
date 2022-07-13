@@ -4,8 +4,8 @@ class ImageGrid {
     #image_change_effect = ['left','right','bottom', 'top'];
     #image_grid = document.querySelectorAll('.grid__image')[0];
     #image_time_change = 8000;
-    #imagesGridShuffle = () =>{
-        this.#image_grid_list =  this.#image_grid_list.sort(() => Math.random() - 0.5);
+    #imagesGridShuffle = () => {
+        this.#image_grid_list =  this.#image_grid_list.sort( () => Math.random() - 0.9 );
         this.#setImagesGrid();
     }
     #getEffectShuffle = () => {
@@ -17,11 +17,8 @@ class ImageGrid {
     }
 
     #setImagesGrid = ()=>{
-
         this.#image_grid_list.map((img,index) =>{
             this.#image_grid.children[index].classList.remove('img-offset-top');
-            console.log(img,index)
-
             this.#image_grid.children[index].style.backgroundPosition='unset'
             this.#image_grid.children[index].classList.remove('--image-change-left','--image-change-right','--image-change-bottom', '--image-change-top')
             this.#image_grid.children[index].style.backgroundPosition=this.#getEffectShuffle();
@@ -30,13 +27,16 @@ class ImageGrid {
             let time = setTimeout( ()=> {
                 this.#image_grid.children[index].style.backgroundPosition='center'
                 if( img.includes('04') && index ===  2  
+                    || img.includes('04') && index ===  4  
+                    || img.includes('07') && index ===  4  
                     || img.includes('04') && index ===  5  
                     || img.includes('02') && index ===  2 
-                    || img.includes('02') && index ===  5 ){
-                    console.log('foi')
+                    || img.includes('02') && index ===  5
+                    || img.includes('02') && index ===  4  ){
                     this.#image_grid.children[index].classList.add('img-offset-top');
                     this.#image_grid.children[index].style.backgroundPosition='initial'
                 }
+                clearTimeout(time)
             },200)
         })
     }

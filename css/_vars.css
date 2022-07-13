@@ -1,13 +1,11 @@
 :root {
     --primary: #66CC55;
-    --secondary: #555555;
+    --secondary: #555;
     --tertiary: #EEEEEE;
     --quarternary: #FFFFFF;
     --quinternary: #D5D5D5;
-    --sexternary:#F9F9F9;
+    --sexternary: #F9F9F9;
     --bs-gutter-x: 1.6rem;
     --bs-gutter-y: 0;
     --default-font: 'Oswald', sans-serif;
 }
-
-  
