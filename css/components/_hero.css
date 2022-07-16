@@ -40,10 +40,6 @@
         text-align: center;
     }
 
-    .hero__copy .btn {
-        display: inline-block;
-    }
-
     .hero__wrapper h1 {
         font-size: 4rem;
     }

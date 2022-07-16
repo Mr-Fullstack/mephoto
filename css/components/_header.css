@@ -29,7 +29,7 @@
 
 .header__wrapper nav .menu li:hover a {
     color: var(--primary);
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 .header__wrapper nav .btn+.btn {

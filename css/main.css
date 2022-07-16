@@ -16,10 +16,15 @@
 @import url('./components/_tittle_section.css');
 @import url('./components/_section.css');
 @import url('./components/_header.css');
+@import url('./components/_footer.css');
 @import url('./components/_hero.css');
+@import url('./components/_tabs.css');
 
 /* pages */
 @import url('./pages/_home.css');
+@import url('./pages/_login.css');
+@import url('./pages/_signup.css');
+
 
 .logo {
     font-family: 'Pacifico', cursive;
@@ -35,6 +40,7 @@
     background-color: var(--tertiary);
     border: 16px solid var(--tertiary);
     margin-top: 80px;
+    margin-bottom: 64px;
 }
 
 .slider img {
@@ -92,4 +98,16 @@
 
 .swiper-button-next {
     right: 0px;
+}
+
+#auth {
+    display: none;
+}
+
+#auth:target {
+    display: block;
+}
+
+#auth:target~.hero__copy {
+    display: none;
 }

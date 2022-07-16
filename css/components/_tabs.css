@@ -1,0 +1,43 @@
+.tab {
+  background-color: var(--quarternary);
+}
+
+.tab__header {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.tab__content {
+  display: none;
+  padding: 3.2rem;
+}
+
+.tab__content.active {
+  display: block;
+}
+
+.tab__index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--secondary);
+  cursor: pointer;
+  border-bottom: 4px inset var(--tertiary);
+  flex: 1;
+  text-align: center;
+  padding: 13px;
+  border-right: 1px solid var(--tertiary);
+  min-height: 100%;
+}
+
+.tab__index:last-of-type {
+  border-right: none;
+}
+
+.tab__index.active {
+  color: var(--primary);
+  border-bottom: 4px inset var(--primary);
+}

@@ -1,3 +1,7 @@
 .features_plans {
   background-color: var(--quarternary);
 }
+
+#auth {
+  width: 368px;
+}

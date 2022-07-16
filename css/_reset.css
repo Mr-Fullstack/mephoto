@@ -11,6 +11,7 @@ body {
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,10 +21,11 @@ body {
     background-color: var(--sexternary);
 }
 
-a{
+a {
     text-decoration: none;
 }
-img{
+
+img {
     max-width: 100%;
     height: auto;
 }
@@ -50,29 +52,44 @@ h6 {
     border: unset;
     outline: none;
     cursor: pointer;
-    max-width:200px;
+    max-width: 200px;
     text-align: center;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 500;
     border-width: 4px;
     border-style: solid;
+    display: inline-block;
 }
 
 .btn__primary {
     background-color: var(--primary);
     color: var(--quarternary);
-    border-color:transparent;
+    border-color: transparent;
 }
 
-.c__quarternary{
+.btn__secondary {
+    background-color: var(--quarternary);
+    color: var(--secondary);
+    border-color: transparent;
+}
+
+.c__quarternary {
     color: var(--quarternary);
 }
 
 .btn__primary__outline {
-    background-color: unset;
     color: var(--primary);
-    border-color:currentColor;
+}
+
+.btn__primary__outline,
+.btn__secondary__outline {
+    background-color: unset;
+    border-color: currentColor;
+}
+
+.btn__secondary__outline {
+    color: var(--quarternary);
 }
 
 .button.small {
@@ -86,8 +103,8 @@ ul {
     list-style-type: none;
 }
 
-@media  screen and (max-width:596px) {
-    html{
+@media screen and (max-width:596px) {
+    html {
         font-size: 2.5vw;
     }
 }
