@@ -13,7 +13,7 @@ const newUser = new Person()
 imageGrid.config({
     targetWrapper:'.grid__image',
     customClassImageGrid:'grid__image-item',
-    setMillisecondsImageChange:8000,
+    setMillisecondsImageChange:5000,
     imageList:[ 
         './images/01.jpg',
         './images/02.jpg',

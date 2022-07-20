@@ -71,6 +71,28 @@
     .slider.swiper {
         height: 279px;
     }
+    .hidden-xs{
+        visibility: hidden;
+        display: none;
+    }
+    .show-xs{
+        visibility: initial;
+        display: initial;
+    }
+}
+
+@media screen and (min-width:769px) {
+
+
+    .hidden-xs{
+      
+        visibility: initial;
+        display: initial;
+    }
+    .show-xs{
+        visibility: hidden;
+        display: none;
+    }
 }
 
 .swiper-button-next,
@@ -108,3 +130,4 @@
   visibility: hidden;
   display: none;
 }
+

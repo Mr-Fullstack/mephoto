@@ -38,6 +38,21 @@
 
 @media screen and (max-width:1200px) {
     .header__wrapper nav {
-        display: none;
+        position: fixed;
+        width: 65vw;
+        height: 100vh;
+        top: 0px;
+        right: 0vw;
+        background-color: var(--primary);
+        display: block;
+        transition: .3s;
+        z-index: 99999;
+        /* right: -100vw; */
+        box-shadow: 0px 0px 16px #00000063;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
     }
 }
