@@ -24,10 +24,10 @@
                     <ul class="menu">
                         <li><a href="/">Home</a></li>
                         <li><a href="">Plans</a></li>
-                        <li><a href="">Books</a></li>
+                        <li><a href="#books">Books</a></li>
                     </ul>
-                    <a class="btn btn__primary btn__primary__outline" href="#auth"> <span>LOGIN</span> </a>
-                    <a class="btn btn__primary" href="#auth"> <span>JOIN US</span> </a>
+                    <a class="btn btn__primary btn__primary__outline js-auth-toggle js-show-signin"> <span>LOGIN</span> </a>
+                    <a class="btn btn__primary js-auth-toggle js-show-signup"> <span>JOIN US</span> </a>
                 </nav>
             </div>
         </div>
@@ -38,16 +38,65 @@
                 <div class="container">
                     <div class="hero__wrapper">
                         <div class="grid__image"></div>
-                        <div id="auth">
+                        <div id="auth" class="hidden">
                             <div id="tab-auth">
                                 <div data-tab-name="Login">
                                     <form action="" id="form-signin">
-                                        login
+                                        <div class="input-form">
+                                            <div class="input-control --floating-label">
+                                                <input type="email" name="email" placeholder="Email">
+                                                <label for="email">Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-form">
+                                            <div class="input-control --floating-label">
+                                                <input type="password" name="pasword" placeholder="Password">
+                                                <label for="password">Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-reset-password">
+                                            <a href="">Forgot password ?</a>
+                                        </div>
+                                        <div class="form-submit">
+                                            <input type="submit" class="btn btn__primary" value="Login"/>
+                                        </div>
                                     </form>
                                 </div>
                                 <div data-tab-name="Create account">
                                     <form action="" id="form-signup">
-                                        cadastro
+                                        <div class="input-form">
+                                            <div class="input-control --floating-label">
+                                                <input class="input-value" type="text" name="username" placeholder="username">
+                                                <label for="username">Username</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-form">
+                                            <div class="input-control --floating-label">
+                                                <input class="input-value" type="email" name="email" placeholder="Email">
+                                                <label for="email">Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-form">
+                                            <div class="input-control --floating-label" >
+                                                <input class="input-value" type="password" name="pasword" placeholder="Password" data-control="signup-password">
+                                                <label for="password">Password</label>
+                                            </div>
+                                            <div class="input-form-control-input-password" data-target="signup-password">
+                                                <span>Show</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-terms">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" name="terms" id="terms" >
+                                                <label for="terms">
+                                                    <span class="form-checkbox-trigger"></span>
+                                                    <span> I agree to <a href="http://">terms of use</a> </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-submit">
+                                            <input type="submit" class="btn btn__primary" value="Create"/>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -56,12 +105,12 @@
                             <h1>
                                 Find amazing images in our collection
                             </h1>
-                            <a class="hero__cta btn btn__primary" href="#"><span>Get started free</span></a>
+                            <a class="hero__cta btn btn__primary js-auth-toggle js-show-signup" href="#"><span>Get started free</span></a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="section features_plans">
+            <section class="section features_plans" id="books">
                 <div class="container">
                     <div class="features_plans__wrapper">
                         <div class="title-section">
@@ -116,8 +165,8 @@
                         </div>
                         <div class="col-md-6">
                             <div class="auth">
-                                <a class="btn btn__secondary btn__secondary__outline" href="#auth"> <span>LOGIN</span> </a>
-                                <a class="btn btn__secondary" href="#auth"> <span>JOIN US</span> </a>
+                                <a class="btn btn__secondary btn__secondary__outline js-auth-toggle js-show-signin"> <span>LOGIN</span> </a>
+                                <a class="btn btn__secondary js-auth-toggle js-show-signup"> <span>JOIN US</span> </a>
                             </div>
                         </div>
                     </div>

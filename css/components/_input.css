@@ -1,0 +1,65 @@
+input{
+    font-family: 'Oswald';
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.input-form{
+    margin-bottom: 3.2rem;
+    position: relative;
+}
+
+
+.input-control{
+    height: 35px;
+}
+
+.input-control label{
+    width: 100%;
+    pointer-events: none;
+    transition: .1s ease-in;
+    color: var(--septenary);
+}
+
+.input-control input{
+    border-color:transparent;
+    border-bottom-color: #ccc;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    color: var(--secondary);
+    width: 100%;
+}
+
+.input-control.--floating-label {
+    position: relative;
+}
+.input-control.--floating-label label{
+    position: absolute;
+    left:0rem;
+    top: 0.6rem;
+}
+.input-control.--floating-label input::placeholder{
+    color: transparent;
+}
+.input-control.--floating-label input:empty:focus ~ label{
+    top: -1.6rem;
+}
+.input-control.--floating-label input:not(:placeholder-shown) ~ label{
+    top: -1.6rem;
+}
+
+.input-form-control-input-password{
+    position: absolute;
+    top: 0px;
+    right:0px;
+    cursor: pointer;
+}
+
+.input-form.input-error .input-control label{
+    color: var(--danger);
+}
+
+.input-form.input-error .input-control input{
+    border-bottom-color:  var(--danger);
+}

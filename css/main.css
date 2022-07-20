@@ -19,12 +19,13 @@
 @import url('./components/_footer.css');
 @import url('./components/_hero.css');
 @import url('./components/_tabs.css');
+@import url('./components/_form.css');
+@import url('./components/_input.css');
 
 /* pages */
 @import url('./pages/_home.css');
 @import url('./pages/_login.css');
 @import url('./pages/_signup.css');
-
 
 .logo {
     font-family: 'Pacifico', cursive;
@@ -45,7 +46,6 @@
 
 .slider img {
     height: 100%;
-    /* min-width: fit-content; */
     object-fit: cover;
 }
 
@@ -101,13 +101,10 @@
 }
 
 #auth {
-    display: none;
+    height: 543px;
 }
 
-#auth:target {
-    display: block;
-}
-
-#auth:target~.hero__copy {
-    display: none;
+.hidden{
+  visibility: hidden;
+  display: none;
 }
