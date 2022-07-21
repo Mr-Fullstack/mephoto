@@ -46,5 +46,5 @@ input[type="submit"]{
     align-items: center;
 }
 .form-checkbox input:checked ~ label > .form-checkbox-trigger::after{
-   color: #fff;
+   color: var(--quarternary);
 }

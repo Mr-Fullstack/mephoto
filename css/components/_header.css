@@ -5,54 +5,5 @@
     margin-top: 20px;
 }
 
-.header__wrapper nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.header__wrapper nav .menu {
-    margin-right: 32px;
-}
 
-.header__wrapper nav .menu li {
-    display: inline-block;
-    margin-right: 32px;
-    font-size: 20px;
-    font-weight: 300;
-    padding: 8px;
-}
-
-.header__wrapper nav .menu li a {
-    color: var(--secondary);
-}
-
-.header__wrapper nav .menu li:hover a {
-    color: var(--primary);
-    /* font-weight: 700; */
-}
-
-.header__wrapper nav .btn+.btn {
-    margin-left: 16px;
-}
-
-@media screen and (max-width:1200px) {
-    .header__wrapper nav {
-        position: fixed;
-        width: 65vw;
-        height: 100vh;
-        top: 0px;
-        right: 0vw;
-        background-color: var(--primary);
-        display: block;
-        transition: .3s;
-        z-index: 99999;
-        /* right: -100vw; */
-        box-shadow: 0px 0px 16px #00000063;
-    }
-    .menu{
-        display: flex;
-        flex-direction: column;
-        margin: 0px;
-    }
-}

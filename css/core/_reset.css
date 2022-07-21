@@ -52,12 +52,16 @@ h6 {
     max-width: 100%;
 }
 
+body.menu-open{
+    position: fixed;
+}
+
 .btn {
     padding: 8px 15px;
     border: unset;
     outline: none;
     cursor: pointer;
-    max-width: 200px;
+    min-width: 200px;
     text-align: center;
     text-transform: uppercase;
     font-size: 20px;
@@ -103,7 +107,11 @@ h6 {
 .button.small {
     font-size: 1.8rem;
 }
-
+.text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
 ul {
     padding: 0px;
     margin: 0px;

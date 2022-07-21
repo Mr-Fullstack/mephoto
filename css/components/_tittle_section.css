@@ -8,6 +8,7 @@
 
 .title-section h2 {
   font-weight: 400;
+  font-size: 4rem;
 }
 
 .title-section::after,
@@ -25,4 +26,10 @@
 
 .title-section::before {
   margin-bottom: 12px;
+}
+.subtitle-section{
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #555;
 }

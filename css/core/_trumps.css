@@ -1,0 +1,29 @@
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+
+@media screen and (max-width:769px) {
+
+    .hidden-xs{
+        visibility: hidden;
+        display: none;
+    }
+    .show-xs{
+        visibility: initial;
+        display: initial;
+    }
+}
+
+@media screen and (min-width:769px) {
+
+    .hidden-xs{
+        visibility: initial;
+        display: initial;
+    }
+
+    .show-xs{
+        visibility: hidden;
+        display: none;
+    }
+}

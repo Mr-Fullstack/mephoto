@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Pacifico&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <title>MePhoto</title>
     <link rel="stylesheet" href="./css/main.css">
@@ -20,15 +20,21 @@
                 <a class="logo" href="/">
                     <h1>MePhoto</h1>
                 </a>
-                <nav>
-                    <ul class="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="">Plans</a></li>
+                 <button id="js-menu-open" class="menu-toggle show-xs"></button>
+                <nav id="menu">
+                    <button id="js-menu-close" class="menu-toggle show-xs"></button>
+                    <ul class="menu-list">
+                        <li><a href="#explorer">Explorer</a></li>
+                        <li><a href="#plans">Plans</a></li>
                         <li><a href="#books">Books</a></li>
+                        <li><a href="#about">About</a></li>
                     </ul>
                     <!-- <a class="btn btn__primary btn__primary__outline js-auth-toggle js-show-signin"> <span></span> </a> -->
                     <a class="btn btn__primary js-auth-toggle js-show-signup hidden-xs"> <span>Get started</span> </a>
                     <a class="btn btn__secondary btn__secondary__outline js-auth-toggle js-show-signup show-xs"> <span>Get started</span> </a>
+                    <a class="logo show-xs" href="/">
+                        <h1>MePhoto</h1>
+                    </a>
                 </nav>
             </div>
         </div>
@@ -147,7 +153,118 @@
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         </div>
-                        <a class="btn btn__primary" href="#"> <span>See our plans</span></a>
+                        <p class="subtitle-section">New photos every day for you to download!</p>
+                        <p class="text">Save and build your own photo album.</p>
+                        <a class="btn btn__primary" href="#plans"> <span>See our plans</span></a>
+                    </div>
+                </div>
+            </section>
+            <section class="section plans" id="plans">
+                <div class="container">
+                    <div class="title-section">
+                        <h2>Choose Your Plan</h2>
+                    </div>
+                    <div class="card_plans_grid">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card_plan">
+                                    <div class="card_plan_header">
+                                        Free
+                                    </div>
+                                    <div class="card_plan_amount">
+                                        <div>
+                                            <span class="card_plan_amount_symbol">$</span>
+                                            <span class="card_plan_amount_price">0.0</span>
+                                            <span class="card_plan_amount_month">/mo</span>
+                                        </div>
+                                        <p class="card_plan_amount_currency_code">USD</p>
+                                    </div>
+                                    <div class="card_plan_details">
+                                        <ul>
+                                            <li>Download 10 photos per day</li>
+                                            <li>500mb Cloud Storage</li>
+                                            <li>Access To 1 million photos</li>
+                                        </ul>
+                                        <a class="btn btn__secondary btn__secondary__outline"> <span>Select</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card_plan">
+                                    <div class="card_plan_header">
+                                        Starter
+                                    </div>
+                                    <div class="card_plan_amount">
+                                        <div>
+                                            <span class="card_plan_amount_symbol">$</span>
+                                            <span class="card_plan_amount_price">9.90</span>
+                                            <span class="card_plan_amount_month">/mo</span>
+                                        </div>
+                                        <p class="card_plan_amount_currency_code">USD</p>
+                                    </div>
+                                    <div class="card_plan_details">
+                                        <ul>
+                                            <li>Download 100 photos per day </li>
+                                            <li>2gb Cloud storage</li>
+                                            <li>High resolution 1080P images</li>
+                                            <li>Access To 1 million premium photos</li>
+                                        </ul>
+                                        <a class="btn btn__secondary btn__secondary__outline"> <span>Select</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card_plan">
+                                    <div class="card_plan_header">
+                                        Professional
+                                    </div>
+                                    <div class="card_plan_amount">
+                                        <div>
+                                            <span class="card_plan_amount_symbol">$</span>
+                                            <span class="card_plan_amount_price">29.90</span>
+                                            <span class="card_plan_amount_month">/mo</span>
+                                        </div>
+                                        <p class="card_plan_amount_currency_code">USD</p>
+                                    </div>
+                                    <div class="card_plan_details">
+                                        <ul>
+                                            <ul>
+                                                <li>Download 500 photos per day </li>
+                                                <li>10gb Cloud storage</li>
+                                                <li>High resolution 4k Images</li>
+                                                <li>Access To 2 million premium photos</li>
+                                            </ul>
+                                        </ul>
+                                        <a class="btn btn__secondary btn__secondary__outline"> <span>Select</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card_plan">
+                                    <div class="card_plan_header">
+                                        Agency 
+                                    </div>
+                                    <div class="card_plan_amount">
+                                        <div>
+                                            <span class="card_plan_amount_symbol">$</span>
+                                            <span class="card_plan_amount_price">59.90</span>
+                                            <span class="card_plan_amount_month">/mo</span>
+                                        </div>
+                                        <p class="card_plan_amount_currency_code">USD</p>
+                                    </div>
+                                    <div class="card_plan_details">
+                                        <ul>
+                                            <li>Up To 10 Manageable account</li>
+                                            <li>Download unlimited photos </li>
+                                            <li>20gb Cloud storage</li>
+                                            <li>Access To 4 million premium photos</li>
+                                            <li>High resolution 4k Images</li>
+                                        </ul>
+                                        <a class="btn btn__secondary btn__secondary__outline"> <span>Select</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

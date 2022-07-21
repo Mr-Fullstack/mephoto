@@ -8,6 +8,11 @@
   justify-content: space-between;
 }
 
+.tab__header > * {
+ touch-action: none;
+ pointer-events: none;
+}
+
 .tab__content {
   display: none;
   padding: 3.2rem;
