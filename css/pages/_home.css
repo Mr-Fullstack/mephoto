@@ -1,7 +1,9 @@
-.features_plans {
+.books {
   background-color: var(--quarternary);
 }
-
+.books-box{
+  margin: 64px 0px;
+}
 #auth {
   width: 368px;
   /* height: 543px; */

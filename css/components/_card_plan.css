@@ -10,14 +10,30 @@
     color: var(--quarternary);
     padding-top: var(--card-plan-top);
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     min-height: 255px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+.card_plans_grid > .row > .col-md-3:nth-child(3) .card_plan:before{
+    content: "Most popular";
+    position: absolute;
+    top: -29px;
+    right:0px;
+    display: block;
+    width: 95px;
+    text-align: center;
+    /* font-size: 1.4rem; */
+    text-transform: uppercase;
+    padding: 4px;
+    background-color: #CCC755;
+    color: var(--quarternary);
+
+}
+
 .card_plans_grid{
-    margin-top: 8rem;
+    margin-top: 16rem;
 }
 
 .card_plan_header{
@@ -27,6 +43,7 @@
     font-size: 2.4rem;
     height: var(--card-plan-header-height);
     text-transform: uppercase;
+    transition: all .5s;
 }
 .card_plan_amount{
     text-align: center;
@@ -35,6 +52,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: all .5s;
 }
 
 .card_plan_amount_price{
@@ -56,12 +74,13 @@
 }
 
 .card_plan_details{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    visibility: hidden;
+    opacity: 0;
     text-align: center;
     text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.60);
+    filter: blur(10px); 
+    /* background-color: rgba(0, 0, 0, 0.60); */
+    background-color: rgba(102, 204, 85,0.60);
     padding: 1.6rem;
     position: absolute;
     left: 0px;
@@ -69,24 +88,61 @@
     z-index: 0;
     height: 100%;
     width: 100%;
-    transform: translateY(100%);
+    transform: translateY(50%);
     transition: all .3s ease-in;
     /* padding-top: calc( var(--card-plan-header-height) + var(--card-plan-top)  + 3.2rem) ; */
-   
-    
 }
 
 .card_plan:hover .card_plan_details{
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: all .3s ease-in;
     transform: translateY(0%);
     /* backdrop-filter: blur(0px); */
     animation: animateBlur .4s ease-in forwards;
 }
+.card_plan:hover .card_plan_header, 
+.card_plan:hover .card_plan_amount{
+    filter: blur(35px);
+    transform: scale(.5);
+    transition: all 1s;
+    
+}
+
+.card_plans_hover-description{
+    position: absolute;
+    opacity: 0;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+}
+.card_plan:hover .card_plans_hover-description{
+    padding: 0px .8rem;
+    visibility: visible;
+    left: 0px;
+    top: -54px;
+    background-color: var(--primary);
+    display: block;
+    opacity: 1;
+    transition: all .5s;
+}
+
+.card_plans_hover-description > div:first-child{
+    font-size: 1.6rem;
+    margin-right: 1rem;
+}
+.card_plans_hover-description .card_plan_amount_price{
+    font-size: 2rem;
+}
 
 @keyframes animateBlur {
-    to{
-        backdrop-filter: blur(4px);
-        background-color: rgba(0, 0, 0, 0.80);
+
+   to{
+        filter: blur(0px); 
+        background-color: rgba(0,0,0, 0.8); 
+        opacity: 1;
     }
 }
 .card_plan_details ul {

@@ -1,7 +1,8 @@
 #menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
+    flex: 1;
 }
 
 #menu .menu-list {
@@ -42,8 +43,12 @@
 .menu-toggle i{
     pointer-events: none;
     touch-action: none;
+    display: inline-block;
 }
 
+#js-menu-open.menu-toggle{
+    text-align: right;
+}
 
 @media screen and (max-width:1200px) {
     #menu {
@@ -56,7 +61,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: stretch;
+        align-items: center;
         transition: .3s;
         z-index: 99999;
         right: -100vw;
@@ -66,6 +71,7 @@
         display: flex;
         flex-direction: column;
         margin: 0px;
+        width: 100%;
     }
     #menu .menu-list li{
         padding-left: 0rem;
@@ -86,8 +92,9 @@
     #menu .menu-list li:hover a{
         color: var(--primary);
     }
-    .menu-list + .btn + .btn{
+    #menu .menu-list + .btn + .btn{
         margin-top: 6.4rem;
+        margin-left: 0px;
     }
 
 }

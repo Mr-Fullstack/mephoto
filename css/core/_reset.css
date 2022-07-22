@@ -61,7 +61,8 @@ body.menu-open{
     border: unset;
     outline: none;
     cursor: pointer;
-    min-width: 200px;
+    width: 200px;
+    max-width: fit-content;
     text-align: center;
     text-transform: uppercase;
     font-size: 20px;

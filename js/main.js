@@ -81,7 +81,7 @@ imageGrid.init();
     
                     if(window.innerWidth < 1200){
                         hero_grid_image.classList.add('hidden')
-                        hero_wrapper.style.paddingBottom = '0px'
+                        // hero_wrapper.style.paddingBottom = '0px'
                         hero_wrapper.style.justifyContent="center";
                     }
     
@@ -253,3 +253,30 @@ const menu_links_actions = new Action({
 })
 
 /* #endregion */
+
+/*#region LINK SECTION SCROLL CONFIG */
+
+  const menu_links_section = BODY.querySelectorAll('.menu-list li a')
+  const link_section = new Action({
+    elements:[...menu_links_section],
+    events:[{
+        name:'click',
+        script:(evt) => {
+            evt.preventDefault()
+            const search_section = "#"+evt.target.href.split('#')[1]
+            const section = BODY.querySelector(search_section).getBoundingClientRect()
+            // window.scrollTo(0,1501)
+            setTimeout( ()=> {
+                window.scrollTo({
+                 top: section.top,
+                 left: 0
+              });
+            },100)
+            
+            console.log(window)
+
+        }
+    }]
+  })  
+
+/*#endregion */
