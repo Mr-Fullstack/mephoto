@@ -1,0 +1,24 @@
+@import url('./_section_photographer.css');
+@import url('./_section_explorer.css');
+@import url('./_section_photos.css');
+@import url('./components/table-grid-plan.css');
+
+#auth {
+  width: 368px;
+}
+.explore{
+  background-color: var(--quarternary);
+}
+.plans{
+  background-color: var(--quarternary);
+}
+.photos{
+  background-color: var(--quarternary);
+}
+.books {
+  /* background-color: #f2f7f1; */
+}
+.photographer {
+  /* background-color: #f2f7f1; */
+}
+ 

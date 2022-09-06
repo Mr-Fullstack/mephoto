@@ -1,0 +1,15 @@
+:root {
+    --primary:#55CC8C ; /* #66CC55; */
+    --primary-2:#559ACC;
+    --secondary: #555;
+    --tertiary: #EEEEEE;
+    --quarternary: #FFF;
+    --quinary: #D5D5D5;
+    --senary: #F9F9F9;
+    --septenary: #A6A6A6;
+    --octonary: #333;
+    --danger: #CC5555;
+    --bs-gutter-x: 1.6rem;
+    --bs-gutter-y: 0;
+    --default-font: 'Oswald', sans-serif;
+}

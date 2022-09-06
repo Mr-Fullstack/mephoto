@@ -1,0 +1,101 @@
+.hidden {
+    visibility: hidden;
+    display: none;
+    pointer-events: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+@media screen and (max-width:1200px) {
+
+    .hidden-md {
+        visibility: hidden;
+        display: none;
+        pointer-events: none;
+    }
+
+    .show-md {
+        visibility: initial;
+        display: initial;
+        pointer-events: all;
+    }
+
+    .md-text-center {
+        text-align: center;
+    }
+
+    .md-text-left {
+        text-align: left;
+    }
+
+    .md-text-right {
+        text-align: right;
+    }
+
+}
+
+@media screen and (max-width:769px) {
+    .hidden-xs {
+        visibility: hidden;
+        display: none;
+        pointer-events: none;
+    }
+
+    .show-xs {
+        visibility: initial;
+        display: initial;
+        pointer-events: all;
+    }
+
+    .xs-text-center {
+        text-align: center;
+    }
+
+    .xs-text-left {
+        text-align: left;
+    }
+
+    .xs-text-right {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width:769px) {
+
+    .hidden-xs {
+        visibility: initial;
+        display: initial;
+        pointer-events: all;
+    }
+
+    .show-xs {
+        visibility: hidden;
+        display: none;
+        pointer-events: none;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .hidden-md {
+        visibility: initial;
+        display: initial;
+        pointer-events: all;
+    }
+
+    .show-md {
+        visibility: hidden;
+        display: none;
+        pointer-events: none;
+    }
+}

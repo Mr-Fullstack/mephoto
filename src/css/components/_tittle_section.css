@@ -1,0 +1,74 @@
+.title-section,
+.title-search-page {
+  text-transform: uppercase;
+  color: var(--secondary);
+  width: fit-content;
+  display: inline-block;
+  line-height: 0;
+}
+.title-section{
+  margin-bottom: 12.8rem;
+}
+.title-search-page h2,
+.title-section h2 {
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.title-search-page::before,
+.title-search-page::after,
+.title-section::after,
+.title-section::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 7px;
+  border-radius: .2rem;
+}
+
+.title-search-page{
+  color:var(--quarternary);
+  top: 140px;
+  opacity: 0;
+  animation: slideUp .3s forwards linear;
+  animation-delay: .4s;
+}
+.title-search-page h2{
+  color:currentColor;
+}
+.title-search-page::before,
+.title-search-page::after{
+  background-color:currentColor; 
+}
+.title-section::after,
+.title-section::before {
+  background-color: var(--primary);
+}
+
+.title-search-page:after,
+.title-section::after {
+  margin-top: 12px;
+}
+
+.title-search-page:before,
+.title-section::before {
+  margin-bottom: 12px;
+}
+
+.subtitle-section{
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #555;
+}
+
+
+@media screen and (max-width:1200px) {
+  .title-search-page h2,
+  .title-section h2 {
+    font-size: 3rem;
+  }
+  .title-section{
+    margin-bottom: 6.4rem;
+  }
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<head>
+    <title>MePhoto - Home</title>
+</head>
+
+<body>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__wrapper">
+                    <div class="grid__image"></div>
+                    <div id="auth" class="hidden">
+                        <div id="tab-auth">
+                            <div data-tab-name="Login">
+                                <form action="" id="form-signin">
+                                    <div class="input-form">
+                                        <div class="input-control --floating-label">
+                                            <input class="input-value" type="email" name="email" placeholder="Email">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-form">
+                                        <div class="input-control --floating-label">
+                                            <input class="input-value" type="password" name="pasword" placeholder="Password">
+                                            <label for="password">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-reset-password">
+                                        <a href="">Forgot password ?</a>
+                                    </div>
+                                    <div class="form-submit">
+                                        <input type="submit" class="btn btn__primary" value="Login" />
+                                    </div>
+                                </form>
+                            </div>
+                            <div data-tab-name="Create account">
+                                <form action="" id="form-signup">
+                                    <div class="input-form">
+                                        <div class="input-control --floating-label">
+                                            <input class="input-value" type="text" name="username" placeholder="username">
+                                            <label for="username">Username</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-form">
+                                        <div class="input-control --floating-label">
+                                            <input class="input-value" type="email" name="email" placeholder="Email">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-form">
+                                        <div class="input-control --floating-label">
+                                            <input class="input-value" type="password" name="pasword" placeholder="Password" data-control="signup-password">
+                                            <label for="password">Password</label>
+                                        </div>
+                                        <div class="input-form-control-input-password" data-target="signup-password">
+                                            <span>Show</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-terms">
+                                        <div class="form-checkbox">
+                                            <input type="checkbox" name="terms" id="terms">
+                                            <label for="terms">
+                                                <span class="form-checkbox-trigger"></span>
+                                                <span> I agree to <a href="http://">terms of use</a> </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-submit">
+                                        <input type="submit" class="btn btn__primary" value="Create" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__copy">
+                        <h1>
+                            Find amazing images in our collection
+                        </h1>
+                        <a class="hero__cta btn btn__primary js-auth-toggle js-show-signup"><span>Get started free</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section photos" id="photos">
+
+            <div class="title-section">
+                <h2>NEW TODAY PHOTOS</h2>
+            </div>
+            <div class="swiper swiper-photos">
+                <div class="swiper-wrapper"></div>
+            </div>
+            <div class="section_call_action">
+                <p class="subtitle-section">New photos every day for you to download!</p>
+                <p class="text">Save and build your own images album.</p>
+                <a class="btn btn__primary link-section" href="#plans"> <span>GET A PLAN</span></a>
+            </div>
+
+        </section>
+        <section class="section books" id="books">
+            <div class="container">
+                <div class="title-section">
+                    <h2>Be a model</h2>
+                </div>
+                <div class="slider swiper swiper-books">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./images/08.jpg" loading=lazy />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/09.jpg" loading=lazy>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/04.jpg" loading=lazy>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/06.jpg" loading=lazy>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/01.jpg" loading=lazy />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/02.jpg" loading=lazy>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/03.jpg" loading=lazy>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/07.jpg" loading=lazy>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="section_call_action">
+                    <p class="subtitle-section">Earn money as a freelancer model!</p>
+                    <p class="text">Sign up and get paid to be photographed.</p>
+                    <a class="btn btn__primary js-auth-toggle js-show-signup"> <span>Get started</span></a>
+                </div>
+            </div>
+        </section>
+        <section class="section explore" id="explore">
+            <div class="container">
+                <div class="title-section">
+                    <h2>Explore by categories</h2>
+                </div>
+                <div class="explore-grid">
+                    <a href="explore-nature" class="explore-grid-card nature link-page">
+                        <figure>
+                            <figcaption>
+                                <span>Nature</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="explore-objects" class="explore-grid-card objects link-page">
+                        <figure>
+                            <figcaption>
+                                <span>Objects</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="explore-sports" class="explore-grid-card sports link-page">
+                        <figure>
+                            <figcaption>
+                                <span>Sports</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="explore-children" class="explore-grid-card child link-page">
+                        <figure>
+                            <figcaption>
+                                <span>Children</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="explore-technology" class="explore-grid-card technology link-page">
+                        <figure>
+                            <figcaption>
+                                <span>Technology</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="explore-people" class="explore-grid-card people link-page">
+                        <figure>
+                            <figcaption>
+                                <span>People</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="explore-animals" class="explore-grid-card animals link-page">
+                        <figure>
+                            <figcaption>
+                                <span>Animals</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="explore-architecture" class="explore-grid-card architecture link-page">
+                        <figure>
+                            <figcaption>
+                                <span>Architecture</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="section_call_action">
+                    <p class="subtitle-section">Categories that make your search easie!</p>
+                    <p class="text">in the categories you can easily find the best photo you want.</p>
+                    <a class="btn btn__primary link-page" href="explore-main"> <span>See more</span></a>
+                </div>
+
+            </div>
+        </section>
+        <section class="section photographer" id="photographer">
+            <div class="container">
+                <div class="title-section">
+                    <h2>Be a photographer</h2>
+                </div>
+                <div class="photographer_grid">
+                    <figure>
+                        <img src="./images/photographer_01.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./images/photographer_02.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./images/photographer_03.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./images/photographer_04.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./images/photographer_05.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./images/photographer_06.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./images/photographer_07.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./images/photographer_08.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./images/photographer_09.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./images/photographer_10.jpg" alt="">
+                    </figure>
+                </div>
+                <div class="section_call_action">
+                    <p class="subtitle-section">Make extra money as a freelance photographer!</p>
+                    <p class="text"> show your work for free and get hired for it.</p>
+                    <a class="btn btn__primary js-auth-toggle js-show-signup"> <span>Get started</span></a>
+                </div>
+            </div>
+        </section>
+        <section class="section plans" id="plans">
+            <div class="container">
+                <div class="title-section">
+                    <h2>Choose Your Plan</h2>
+                </div>
+                <div class="card_plans_grid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card_plan">
+                                <div class="card_plan_header">
+                                    Free
+                                </div>
+                                <div class="card_plan_amount">
+                                    <div>
+                                        <span class="card_plan_amount_symbol">$</span>
+                                        <span class="card_plan_amount_price">0.0</span>
+                                        <span class="card_plan_amount_month">/mo</span>
+                                    </div>
+                                    <p class="card_plan_amount_currency_code">USD</p>
+                                </div>
+                                <div class="card_plans_hover-description">
+                                    <div>Free</div>
+                                    <div>
+                                        <span class="card_plan_amount_symbol">$</span>
+                                        <span class="card_plan_amount_price">0.0</span>
+                                        <span class="card_plan_amount_month">/mo</span>
+                                    </div>
+                                </div>
+                                <div class="card_plan_details">
+                                    <ul>
+                                        <li>Download 10 photos a day</li>
+                                        <li>500mb Cloud Storage</li>
+                                        <li>Access To 1 million photos</li>
+                                    </ul>
+                                    <a class="btn btn__secondary btn__secondary__outline"> <span>Select</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card_plan">
+                                <div class="card_plan_header">
+                                    Starter
+                                </div>
+                                <div class="card_plan_amount">
+                                    <div>
+                                        <span class="card_plan_amount_symbol">$</span>
+                                        <span class="card_plan_amount_price">9.90</span>
+                                        <span class="card_plan_amount_month">/mo</span>
+                                    </div>
+                                    <p class="card_plan_amount_currency_code">USD</p>
+                                </div>
+                                <div class="card_plans_hover-description">
+                                    <div>Starter</div>
+                                    <div>
+                                        <span class="card_plan_amount_symbol">$</span>
+                                        <span class="card_plan_amount_price">9.90</span>
+                                        <span class="card_plan_amount_month">/mo</span>
+                                    </div>
+                                </div>
+                                <div class="card_plan_details">
+                                    <ul>
+                                        <li>Download 100 photos a day </li>
+                                        <li>2gb Cloud storage</li>
+                                        <li>High resolution 1080P images</li>
+                                        <li>Access To 1 million premium photos</li>
+                                    </ul>
+                                    <a class="btn btn__secondary btn__secondary__outline"> <span>Select</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card_plan">
+                                <div class="card_plan_header">
+                                    Professional
+                                </div>
+                                <div class="card_plan_amount">
+                                    <div>
+                                        <span class="card_plan_amount_symbol">$</span>
+                                        <span class="card_plan_amount_price">29.90</span>
+                                        <span class="card_plan_amount_month">/mo</span>
+                                    </div>
+                                    <p class="card_plan_amount_currency_code">USD</p>
+                                </div>
+                                <div class="card_plans_hover-description">
+                                    <div>Professional</div>
+                                    <div>
+                                        <span class="card_plan_amount_symbol">$</span>
+                                        <span class="card_plan_amount_price">29.90</span>
+                                        <span class="card_plan_amount_month">/mo</span>
+                                    </div>
+                                </div>
+                                <div class="card_plan_details">
+                                    <ul>
+                                        <ul>
+                                            <li>Download 500 photos a day </li>
+                                            <li>10gb Cloud storage</li>
+                                            <li>High resolution 4k Images</li>
+                                            <li>Access To 2 million premium photos</li>
+                                        </ul>
+                                    </ul>
+                                    <a class="btn btn__secondary btn__secondary__outline"> <span>Select</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card_plan">
+                                <div class="card_plan_header">
+                                    Agency
+                                </div>
+                                <div class="card_plan_amount">
+                                    <div>
+                                        <span class="card_plan_amount_symbol">$</span>
+                                        <span class="card_plan_amount_price">59.90</span>
+                                        <span class="card_plan_amount_month">/mo</span>
+                                    </div>
+                                    <p class="card_plan_amount_currency_code">USD</p>
+                                </div>
+                                <div class="card_plans_hover-description">
+                                    <div>Agency</div>
+                                    <div>
+                                        <span class="card_plan_amount_symbol">$</span>
+                                        <span class="card_plan_amount_price">59.90</span>
+                                        <span class="card_plan_amount_month">/mo</span>
+                                    </div>
+                                </div>
+                                <div class="card_plan_details">
+                                    <ul>
+                                        <li>Up To 10 Manageable account</li>
+                                        <li>Download unlimited photos </li>
+                                        <li>20gb Cloud storage</li>
+                                        <li>Access To 4 million premium photos</li>
+                                        <li>High resolution 4k Images</li>
+                                    </ul>
+                                    <a class="btn btn__secondary btn__secondary__outline"> <span>Select</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_call_action">
+                    <p class="subtitle-section">Perfect plans for your work style!</p>
+                    <p class="text">Make a comparison and choose the best option.</p>
+                    <button class="btn btn__primary" target-modal="modal-plans"> <span>Compare Plans</span></button>
+                </div>
+            </div>
+        </section>
+        <div class="modal modal-mobile-fullscreen" target="modal-plans">
+            <div class="modal-dialog">
+                <div class="modal-main">
+                    <button class="close-modal" close>
+                        <span>X</span>
+                    </button>
+                    <div class="modal-header">
+                        <h1 class="modal-title text-center">Compare Plans</h1>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-grid-plan">
+                            <div class="table-grid-plan-wrapper">
+                                <div class="table-grid-plan-list">
+                                    <ul>
+                                        <li>Free</li>
+                                        <li>Starter</li>
+                                        <li>Professional</li>
+                                        <li>Agency</li>
+                                    </ul>
+                                </div>
+                                <div class="table-grid-plans-feature-list">
+                                    <ul>
+                                        <li>Manageable Account </li>
+                                        <li>X</li>
+                                        <li>X</li>
+                                        <li>X</li>
+                                        <li>10 MANAGEABLE ACCOUNT</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Download Images</li>
+                                        <li>10 A DAY</li>
+                                        <li>100 A DAY</li>
+                                        <li>500 A DAY</li>
+                                        <li>Unlimited</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Cloud Storage</li>
+                                        <li>500MB</li>
+                                        <li>2GB</li>
+                                        <li>10GB</li>
+                                        <li>20GB</li>
+                                    </ul>
+                                    <ul>
+                                        <li>IMAGEM QUALITY</li>
+                                        <li>X</li>
+                                        <li>720P</li>
+                                        <li>1080P</li>
+                                        <li>4K</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Premium Photos</li>
+                                        <li>X</li>
+                                        <li>X</li>
+                                        <li>X</li>
+                                        <li>ACCESS TO 5 MILLION</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

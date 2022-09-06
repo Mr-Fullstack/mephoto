@@ -1,0 +1,27 @@
+@keyframes slideUp{
+    from{
+        opacity: 1;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes zoomInBackgroundImage {
+    99.9%{
+        background-size: 105%;
+    }
+    100%{
+        background-size: cover;
+    }
+}
+
+@keyframes sufleCard {
+    to{
+        transform: translate(0vw, 0px);
+    }
+}
+

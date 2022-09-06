@@ -1,0 +1,144 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: var(--default-font);
+    overflow: hidden overlay;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: var(--senary);
+}
+
+.popup-open,
+.popup-open body {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+input:-webkit-autofill {
+    -webkit-background-clip: text;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    display: inline-block;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5;
+    font-weight: 500;
+    max-width: 100%;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: unset;
+    outline: none;
+    cursor: pointer;
+    width: 200px;
+    max-width: fit-content;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    border-width: 4px;
+    border-style: solid;
+    display: inline-block;
+    border-radius: .5rem;
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: 'Oswald';
+}
+
+.btn span {
+    pointer-events: none;
+    touch-action: none;
+}
+
+.btn__primary {
+    background-color: var(--primary);
+    color: var(--quarternary);
+    border-color: transparent;
+}
+
+.btn__secondary {
+    background-color: var(--quarternary);
+    color: var(--secondary);
+    border-color: transparent;
+}
+
+.c__quarternary {
+    color: var(--quarternary);
+}
+
+.btn__primary__outline {
+    color: var(--primary);
+}
+
+.btn__primary__outline,
+.btn__secondary__outline {
+    background-color: unset;
+    border-color: currentColor;
+}
+
+.btn__secondary__outline {
+    color: var(--quarternary);
+}
+
+.button.small {
+    font-size: 1.8rem;
+}
+
+.text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--octonary);
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+    list-style-type: none;
+}
+
+@media screen and (max-width:596px) {
+    html {
+        font-size: 2.5vw;
+    }
+}

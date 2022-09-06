@@ -1,0 +1,223 @@
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 158px);
+    gap: 1rem;
+}
+
+.explore-grid-card {
+    height: 158px;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.explore-grid-card figure {
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    transition: all 1s;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    color: #559ACC;
+}
+
+.explore-grid-card figure::before {
+    --background-in: 100%;
+    --background-out: 115%;
+    content: "";
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-size: var(--background-in);
+    background-position: center;
+    transition: all 1s;
+    animation: backgroundZoomInOut 1s forwards;
+}
+
+.explore-grid-card:hover figure:before {
+    animation: backgroundZoomIn 1s forwards;
+    background-blend-mode: overlay;
+}
+
+@keyframes backgroundZoomIn {
+    to {
+        background-size: var(--background-out);
+        filter: blur(2px);
+    }
+}
+
+@keyframes backgroundZoomInOut {
+    from {
+        background-size: var(--background-out);
+        filter: blur(2px);
+    }
+
+    to {
+        background-size: var(--background-in);
+        filter: blur(0px);
+    }
+}
+
+.explore-grid-card.nature figure::before {
+    background-image: url("../../../images/img_nature.png");
+}
+
+.explore-grid-card.sports figure::before {
+    background-image: url("../../../images/img_sports.png");
+}
+
+.explore-grid-card.objects figure::before {
+    background-image: url("../../../images/img_object.png");
+}
+
+.explore-grid-card.child figure::before {
+    background-image: url("../../../images/img_child.png");
+}
+
+.explore-grid-card.technology figure::before {
+    background-image: url(../../../images/img_tech.png);
+}
+
+.explore-grid-card.people figure::before {
+    background-image: url(../../../images/img_people.png);
+}
+
+.explore-grid-card.architecture figure::before {
+    background-image: url(../../../images/img_architecture.png);
+}
+
+.explore-grid-card.animals figure::before {
+    background-image: url(../../../images/img_animals.png);
+}
+
+.explore-grid-card figure::after {
+    content: "";
+    display: block;
+    height: 0%;
+    width: 70%;
+    background-color: currentColor;
+    position: absolute;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    z-index: 0;
+    opacity: 0;
+    transition: all .1s;
+}
+
+.explore-grid-card:hover figure::after {
+    height: 100%;
+    opacity: .5;
+    color: #559ACC;
+}
+
+.explore-grid-card.nature:hover figure::before {
+    background-image: linear-gradient(to right bottom, currentColor, currentColor), url(../../../images/img_nature.png);
+}
+
+.explore-grid-card.sports:hover figure::before {
+    background-image: linear-gradient(to right bottom, currentColor, currentColor), url(../../../images/img_sports.png);
+}
+
+.explore-grid-card.objects:hover figure::before {
+    background-image: linear-gradient(to right bottom, currentColor, currentColor), url(../../../images/img_object.png);
+}
+
+.explore-grid-card.child:hover figure::before {
+    background-image: linear-gradient(to right bottom, currentColor, currentColor), url(../../../images/img_child.png);
+}
+
+.explore-grid-card.technology:hover figure::before {
+    background-image: linear-gradient(to right bottom, currentColor, currentColor), url(../../../images/img_tech.png);
+}
+
+.explore-grid-card.people:hover figure::before {
+    background-image: linear-gradient(to right bottom, currentColor, currentColor), url(../../../images/img_people.png);
+}
+
+.explore-grid-card.animals:hover figure::before {
+    background-image: linear-gradient(to right bottom, currentColor, currentColor), url(../../../images/img_animals.png);
+}
+
+.explore-grid-card.architecture:hover figure::before {
+    background-image: linear-gradient(to right bottom, currentColor, currentColor), url(../../../images/img_architecture.png);
+}
+
+.explore-grid-card figure figcaption {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 0px 0px 16px #000;
+}
+
+.explore-grid-card figure figcaption span {
+    color: var(--quarternary);
+}
+
+.explore-grid-card:hover figure figcaption {
+    font-size: 3.2rem;
+    position: absolute;
+    top: 0%;
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animaFigCaption .5s forwards ease-in;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+
+@media (max-width:1200px) {
+    .explore-grid-card figure::before {
+        --background-in: 105%;
+        --background-out: 115%;
+    }
+}
+
+
+@media (max-width:769px) {
+    .explore-grid {
+        display: flex;
+        overflow: auto hidden;
+        scroll-snap-type: x mandatory;
+        margin: -1.6rem;
+        padding: 1.6rem;
+    }
+
+    .explore-grid-card {
+        min-width: 90%;
+        scroll-snap-align: center;
+    }
+
+    .explore-grid-card figure::after {
+        height: 20%;
+        opacity: .5;
+        clip-path: unset;
+        width: 100%;
+        bottom: 0px
+    }
+
+    .explore-grid-card figure:before {
+        --background-in: 100%;
+        --background-out: 115%;
+        /* animation: backgroundZoomIn 1s forwards; */
+        background-blend-mode: overlay;
+    }
+
+    .explore-grid-card figure figcaption {
+        font-size: 3.2rem;
+        top: 0%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+
+}

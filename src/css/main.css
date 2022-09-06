@@ -1,0 +1,48 @@
+/* vars */
+@import url('./core/_vars.css');
+
+/* reset  */
+@import url('./core/_reset.css');
+
+/* grid */
+@import url('./core/_grid.css');
+
+/* fonts  */
+@import url('./core/_fonts.css');
+
+/* animations*/
+@import url('./core/_animations.css');
+
+/* GLOBALS components  */
+@import url('./components/_image_grid.css');
+@import url('./components/_tittle_section.css');
+@import url('./components/_section.css');
+@import url('./components/_header.css');
+@import url('./components/_footer.css');
+@import url('./components/_hero.css');
+@import url('./components/_tabs.css');
+@import url('./components/_form.css');
+@import url('./components/_input.css');
+@import url('./components/_menu.css');
+@import url('./components/_slider.css');
+@import url('./components/_card_plan.css');
+@import url('./components/_modal.css');
+
+/* pages */
+@import url('./pages/home/_home.css');
+@import url('./pages/explore/_explore.css');
+
+/*trumps*/
+@import url('./core/_trumps.css');
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    color: var(--primary);
+    text-decoration: none;
+}
+main{
+    min-height: 70vh;
+}
+
+
+

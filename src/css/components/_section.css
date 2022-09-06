@@ -1,0 +1,21 @@
+.section {
+  text-align: center;
+  padding: 12.8rem 0px;
+}
+
+.section_call_action{
+  margin-top: 12.8rem;
+}
+
+.section_call_action .btn{
+  margin-top: 3.2rem
+}
+
+@media screen and (max-width:1200px) {
+  .section {
+    padding: 6.4rem 0px;
+  }
+  .section_call_action{
+    margin-top: 6.4rem;
+  }
+}

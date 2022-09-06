@@ -1,0 +1,125 @@
+#menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex: 1;
+}
+
+#menu .menu-list {
+    margin-right: 3.2rem;
+    display: flex;
+    align-items: center;
+}
+
+#menu .menu-list li {
+    display: inline-block;
+    margin-right: 3.2rem;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: .8rem;
+}
+
+#menu .menu-list li a {
+    color: var(--secondary);
+}
+
+#menu .menu-list li:hover a {
+    color: var(--primary);
+    /* font-weight: 700; */
+}
+
+#menu .btn+.btn {
+    margin-left: 1.6rem;
+}
+
+.menu-toggle{
+    width: 5rem;
+    height: 5rem;
+    background-color: unset;
+    appearance: none;
+    border: none;
+}
+
+.menu-toggle svg,
+.menu-toggle span,
+.menu-toggle i{
+    pointer-events: none;
+    touch-action: none;
+    display: inline-block;
+}
+
+#js-menu-open.menu-toggle{
+    text-align: right;
+}
+
+#menu .menu_main{
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    justify-content: flex-end;
+}
+
+
+@media screen and (max-width:1200px) {
+    #menu {
+        position: fixed;
+        width: 65vw;
+        height: 100vh;
+        top: 0px;
+        background-color: var(--primary);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        transition: .3s;
+        z-index: 99999;
+        right: -100vw;
+        box-shadow: 0px 0px 16px #00000063;
+    }
+    #menu .menu-list{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        width: 100%;
+    }
+    #menu .menu-list li{
+        padding-left: 0rem;
+        margin-right: 0px;
+        width: 100%;
+    }
+    #menu .menu-list li a{
+        color: var(--quarternary);
+        width: 100%;
+        padding-left: 3.2rem;
+        display: inline-block;
+    }
+    #menu .menu-list li.active,
+    #menu .menu-list li:hover{
+        background-color: var(--quarternary);
+        margin-right: 0px;
+    }
+    #menu .menu-list li.active a,
+    #menu .menu-list li:hover a{
+        color: var(--primary);
+    }
+    #menu .menu-list + .btn + .btn{
+        margin-top: 6.4rem;
+        margin-left: 0px;
+    }
+
+    #menu .logo{
+        font-size: 1.8rem;
+    }
+    #menu .menu_brand,
+    #menu .logo {
+        color: var(--quarternary);
+    }
+    #menu .menu_brand{
+        padding-bottom: 1.6rem;
+    }
+    #menu .menu_main{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+}

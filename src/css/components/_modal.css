@@ -1,0 +1,126 @@
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden overlay;
+  display: none;
+  z-index: 999999999999;
+}
+
+.modal.modal-open {
+  animation: modalOpenBackground .3s forwards linear;
+}
+
+.modal.modal-close {
+  animation: modalCloseBackground .3s forwards linear;
+}
+
+@keyframes modalOpenBackground {
+  to {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+
+@keyframes modalCloseBackground {
+  from {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.0);
+  }
+}
+
+.modal.modal-open {
+  display: block;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close-modal {
+  align-self: flex-end;
+  padding: .8rem;
+  border-radius: .5rem;
+  border: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--octonary);
+}
+
+.modal-dialog {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-main {
+  background-color: #f9f9f9;
+  max-width: 700px;
+  margin: 5% auto;
+  border-radius: .5rem;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  color: var(--secondary);
+  width: 100%;
+}
+
+.modal-body {
+  margin-top: 20px;
+}
+
+.modal.modal-open .modal-main {
+  transform: translate3d(0px, 50px, 0px);
+  animation: modalOpen 500ms forwards linear;
+}
+
+.modal.modal-close .modal-main {
+  transform: translate3d(0px, 0px, 0px);
+  animation: modalClose 500ms forwards linear;
+}
+
+@keyframes modalOpen {
+  to {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+@keyframes modalClose {
+  to {
+    transform: translate3d(0px, 50px, 0px);
+  }
+}
+
+
+@media screen and (max-width:769px) {
+  .modal.modal-mobile-fullscreen .modal-dialog {
+    padding: 0px;
+  }
+
+  .modal.modal-mobile-fullscreen .modal-main {
+    margin: 0px;
+    min-width: 100%;
+    border-radius: 0px;
+    align-self: stretch;
+  }
+}
+
+@media screen and (min-width:769px) {
+  .modal {
+    backdrop-filter: blur(1px);
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Pacifico&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./main.css">
+    <title>MePhoto</title>
+</head>
+
+<body class="page-home">
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a class="logo" href="./">
+                    <h1>MePhoto</h1>
+                </a>
+                <button id="js-menu-open" class="menu-toggle show-md"></button>
+                <nav id="menu">
+                    <div class="menu_main">
+                        <button id="js-menu-close" class="menu-toggle show-md"></button>
+                        <ul class="menu-list">
+                            <li><a href="home" class="link-page">Home</a></li>
+                            <li><a href="#explore" class="link-section">Explore</a></li>
+                            <li><a href="#plans" class="link-section">Plans</a></li>
+                            <li><a href="#books" class="link-section">Books</a></li>
+                        </ul>
+                        <!-- <a class="btn btn__primary btn__primary__outline js-auth-toggle js-show-signin"> <span></span> </a> -->
+                        <a class="btn btn__primary js-auth-toggle js-show-signup hidden-md"> <span>Get started</span> </a>
+                        <a class="btn btn__secondary btn__secondary__outline js-auth-toggle js-show-signup show-md"> <span>Get started</span> </a>
+                    </div>
+                    <div class="menu_brand show-md">
+                        <a class=" logo" href="./">
+                            <h1>MePhoto</h1>
+                        </a>
+                        <p class="">© 2022 mephoto.com</p>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="loading">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;display:block; width: 50px;" width="197px" height="197px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <circle cx="50" cy="50" fill="none" stroke="#66cc55" stroke-width="4" r="41" stroke-dasharray="193.20794819577225 66.40264939859075">
+                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="0.5s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+                </circle>
+            </svg>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <a class="logo" href="#page-home">
+                    <h1>MePhoto</h1>
+                </a>
+                <div class="footer__map">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="footer__copy">© 2022 mephoto.com</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="auth">
+                                <a class="btn btn__secondary btn__secondary__outline js-auth-toggle js-show-signin"> <span>Get started</span> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>

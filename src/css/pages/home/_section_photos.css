@@ -1,0 +1,21 @@
+.photos .swiper-photos figure {
+ /* width: 275px; */
+ height: 414px;
+ background-position: center;
+ background-size: cover;
+}
+.photos .swiper-photos figure img{
+    object-fit: cover;
+    height: 100%;
+}
+.photos .swiper-wrapper{
+    will-change: transform;
+}
+@media screen and (max-width:769px) {
+    .photos .swiper-photos figure {
+        height: fit-content;
+    }        
+    .photos .swiper-photos figure img{
+        width: 100%;
+    } 
+}

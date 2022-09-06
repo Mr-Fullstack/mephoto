@@ -1,0 +1,153 @@
+.explore-input-search {
+    width: 500px;
+    margin: 0px auto;
+    margin-top: 7rem;
+    max-width: 100%;
+    padding: 0px 1.6rem;
+    font-weight: normal;
+    position: relative;
+}
+
+.explore-input-search::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 44px;
+    background-color: var(--quarternary);
+    z-index: 0;
+    position: absolute;
+    width: calc(100% - 3.2rem);
+    height: 4.4rem;
+    left: 1.6rem;
+    border-radius: 0.5rem;
+    top: 0px;
+    z-index: -1;
+}
+
+.explore-search input[type="search"] {
+    background-color: var(--quarternary);
+    border-radius: .5rem;
+    box-shadow: 0px 4px 16px #000;
+    width: 100%;
+    height: 4.4rem;
+    padding: 1rem .9rem;
+    border: none;
+    /* cursor: not-allowed; */
+    outline: var(--primary);
+    font-weight: normal;
+    z-index: 1;
+}
+
+.explore-search input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 1em;
+    width: 1em;
+    border-radius: 50em;
+    background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+    background-size: contain;
+    opacity: 0;
+    /* pointer-events: none; */
+}
+
+.explore-search input[type="search"]:focus::-webkit-search-cancel-button {
+    opacity: .3;
+    pointer-events: all;
+}
+
+.explore-search input[type="search"].dark::-webkit-search-cancel-button {
+    filter: invert(1);
+}
+
+
+.explore-search-image {
+    color: #559ACC;
+    height: 360px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.explore-search-image::before {
+    content: "";
+    color: currentColor;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    /* background-size: cover; */
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-attachment: scroll;
+    animation: zoomInBackgroundImage .3s forwards linear;
+}
+
+
+@media screen and (max-width:1200px) {
+    .explore-search-image::before {
+        background-size: 500vw;
+        animation: zoomInBackgroundImageMobile .3s forwards linear;
+    }
+}
+
+@keyframes zoomInBackgroundImageMobile {
+    99.9% {
+        background-size: 400vw;
+    }
+
+    100% {
+        background-size: cover;
+    }
+}
+
+.explore-search-image.nature::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_nature.png);
+}
+
+.explore-search-image.animals::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_animals.png);
+}
+
+.explore-search-image.film::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_film.png);
+}
+
+.explore-search-image.architecture::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_architecture.png);
+}
+
+.explore-search-image.people::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_people.png);
+}
+
+.explore-search-image.children::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_children.png);
+}
+
+.explore-search-image.street::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_street.png);
+}
+
+.explore-search-image.wallpapers::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_wallpapers.png);
+}
+
+.explore-search-image.business::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_business.png);
+}
+
+.explore-search-image.sports::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_sports.png);
+}
+
+.explore-search-image.objects::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_objects.png);
+}
+
+.explore-search-image.technology::before {
+    background-image: linear-gradient(to right, currentColor, currentColor), url(../../../../images/page_technology.png);
+}
